@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <title>Contact</title>
+</head>
+
+<body>
+
+    <header>
+
+        <a href="../index.html">Magnality</a>
+
+        <nav>
+            <a href="music.html">Music</a>
+            <a href="sound.html">Sound</a>
+            <a href="apps.html">Apps</a>
+            <a href="licence.html">Licence</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="intro">
+
+            <img src="../assets/magnality-banner.jpg" alt="Contact">
+
+            <div class="intro-content">
+                <h1>Contact</h1>
+            </div>
+
+        </section>
+
+        <section class="contact-content">
+
+            <div class="contact-heading">
+
+                <h2>Get in touch</h2>
+
+                <p>
+                    Have a question about my music, licensing, or anything else?
+                    Fill out the form below and I'll get back to you.
+                </p>
+
+            </div>
+
+            <form class="contact-form">
+
+                <label for="email">Email</label>
+
+                <input type="email" id="email" name="email" required>
+
+
+                <label for="subject">Subject</label>
+
+                <select id="subject" name="subject" required>
+
+                    <option value="">Select a subject</option>
+                    <option value="Music Enquiry">Music Enquiry</option>
+                    <option value="Extended Licence">Extended Licence</option>
+                    <option value="Soundtrack Licence">Soundtrack Licence</option>
+                    <option value="Other">Other</option>
+
+                </select>
+
+
+                <label for="message">Message</label>
+
+                <textarea id="message" name="message" rows="8" required></textarea>
+
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+            <p class="contact-note">
+                Your email app should open after clicking Send.
+                If it doesn't, you can email me directly at
+                <a href="mailto:magnalitymusic@gmail.com">
+                    magnalitymusic@gmail.com
+                </a>.
+            </p>
+
+            <div class="contact-direct">
+
+                <h3>Prefer to email directly?</h3>
+
+                <a href="mailto:magnalitymusic@gmail.com">
+                    magnalitymusic@gmail.com
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        const form = document.querySelector(".contact-form");
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            const email = document.querySelector("#email").value;
+            const subject = document.querySelector("#subject").value;
+            const message = document.querySelector("#message").value;
+
+            const body =
+                "From: " + email + "\n\n" +
+                message;
+
+            window.location.href =
+                "mailto:magnalitymusic@gmail.com" +
+                "?subject=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent(body);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
