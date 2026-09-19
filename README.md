@@ -1,1 +1,1 @@
-# magnalitymusic.github.io
+# magnality.github.io
