@@ -27,7 +27,6 @@
     </header>
 
     <main>
-
         <section class="intro">
 
             <img src="../assets/magnality-banner.jpg" alt="Contact">
@@ -38,74 +37,57 @@
 
         </section>
 
-        <section class="contact-content">
 
-            <div class="contact-heading">
+        <form class="contact-form">
 
-                <h2>Get in touch</h2>
+            <label for="email">Email</label>
 
-                <p>
-                    Have a question about my music, licensing, or anything else?
-                    Fill out the form below and I'll get back to you.
-                </p>
-
-            </div>
-
-            <form class="contact-form">
-
-                <label for="email">Email</label>
-
-                <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required>
 
 
-                <label for="subject">Subject</label>
+            <label for="subject">Subject</label>
 
-                <select id="subject" name="subject" required>
+            <select id="subject" name="subject" required>
 
-                    <option value="">Select a subject</option>
-                    <option value="Music Enquiry">Music Enquiry</option>
-                    <option value="Extended Licence">Extended Licence</option>
-                    <option value="Soundtrack Licence">Soundtrack Licence</option>
-                    <option value="Other">Other</option>
+                <option value="">Select a subject</option>
+                <option value="Music Enquiry">Music Enquiry</option>
+                <option value="Extended Licence">Extended Licence</option>
+                <option value="Soundtrack Licence">Soundtrack Licence</option>
+                <option value="Other">Other</option>
 
-                </select>
-
-
-                <label for="message">Message</label>
-
-                <textarea id="message" name="message" rows="8" required></textarea>
+            </select>
 
 
-                <button type="submit">
-                    Send Message
-                </button>
+            <label for="message">Message</label>
 
-            </form>
+            <textarea id="message" name="message" rows="8" required></textarea>
 
-            <p class="contact-note">
-                Your email app should open after clicking Send.
-                If it doesn't, you can email me directly at
-                <a href="mailto:magnalitymusic@gmail.com">
-                    magnalitymusic@gmail.com
-                </a>.
-            </p>
 
-            <div class="contact-direct">
+            <button type="submit">
+                Send Message
+            </button>
 
-                <h3>Prefer to email directly?</h3>
+        </form>
 
-                <a href="mailto:magnalitymusic@gmail.com">
-                    magnalitymusic@gmail.com
-                </a>
-
-            </div>
-
-        </section>
-
+        <p class="contact-note">
+            Your email app should open after clicking Send.
+            If it doesn't, you can email me directly at
+            <a href="mailto:magnalitymusic@gmail.com">
+                magnalitymusic@gmail.com
+            </a>
+        </p>
     </main>
 
 
     <script>
+
+        const params = new URLSearchParams(window.location.search);
+        const subject = params.get("subject");
+
+        if (subject) {
+            document.querySelector("#subject").value = subject;
+        }
+
 
         const form = document.querySelector(".contact-form");
 

@@ -205,6 +205,9 @@ nav a.active::after {
 }
 
 .contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -214,12 +217,23 @@ nav a.active::after {
     margin-top: 16px;
 }
 
+
 .contact-form input,
-.contact-form select,
 .contact-form textarea {
     box-sizing: border-box;
     width: 100%;
     padding: 12px;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    background: #171717;
+    color: #ffffff;
+    font: inherit;
+}
+
+.contact-form select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 36px 12px 12px;
     border: 1px solid #333333;
     border-radius: 6px;
     background: #171717;
@@ -243,10 +257,11 @@ nav a.active::after {
 }
 
 .contact-note {
-    margin-top: 20px;
     color: #aaaaaa;
     font-size: 14px;
     line-height: 1.6;
+    text-align: center;
+    padding: 0 0 20px 0;
 }
 
 .contact-note a,
