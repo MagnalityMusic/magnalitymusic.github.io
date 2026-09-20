@@ -90,14 +90,24 @@ nav a.active::after {
     padding: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 40px;
+}
+
+.music-grid a {
+    display: block;
+    border-radius: 12px;
+    
 }
 
 .music-grid img {
-    display: block;
     width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    transition: transform 150ms ease;
+}
+
+.music-grid a:hover img {
+    transform: scale(1.03);
 }
 
 .licence-content {
@@ -282,4 +292,126 @@ nav a.active::after {
 
 .contact-direct a {
     color: #aaaaaa;
+}
+
+.faq-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 600;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-answer {
+    padding: 0 24px 24px;
+}
+
+.faq-answer p {
+    margin: 0;
+    line-height: 1.7;
+    color: #aaa;
+}
+
+.coming-soon {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 24px;
+}
+
+.coming-soon-card {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.coming-soon-card img {
+    width: 320px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.coming-soon-content {
+    padding: 48px;
+}
+
+.coming-soon-label {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #999;
+}
+
+.coming-soon-content h2 {
+    margin: 0 0 16px;
+}
+
+.coming-soon-content p:last-child {
+    margin: 0;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.faq-categories {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.faq-categories button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #1a1a1a;
+    color: #aaa;
+    font: inherit;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+
+.faq-categories button:hover {
+    color: #fff;
+}
+
+.faq-categories button.active {
+    background: #fff;
+    color: #111;
 }

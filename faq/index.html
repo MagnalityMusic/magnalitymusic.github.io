@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <title>Apps</title>
+</head>
+
+<body>
+
+    <header>
+
+        <a href="../home/">Magnality</a>
+
+        <nav>
+            <a href="../music/">Music</a>
+            <a href="../sound/">Sound</a>
+            <a href="../apps/">Apps</a>
+            <a href="../licence/">Licence</a>
+            <a href="../contact/">Contact</a>
+            <a href="../faq/" class="active">FAQ</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="intro">
+
+            <img src="../assets/magnality-banner.jpg" alt="FAQ">
+
+            <div class="intro-content">
+                <h1>FAQ</h1>
+            </div>
+
+        </section>
+
+        <section class="faq-content">
+
+            <div class="faq-categories">
+                <button class="active" data-category="all">All</button>
+                <button data-category="licensing">Licensing</button>
+                <button data-category="usage">Usage</button>
+                <button data-category="purchasing">Purchasing</button>
+                <button data-category="about">About</button>
+            </div>
+
+            <div class="faq-list">
+
+                <details class="faq-item" data-category="usage">
+                    <summary>Can I use your music in my game?</summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            Yes. A standard licence is included when you purchase a music pack.
+                            This allows you to use the music in commercial and non-commercial
+                            projects, including games, videos, and streams.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-category="usage">
+                    <summary>Can I use the music commercially?</summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            Yes. Commercial use is included with the standard licence.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-category="usage">
+                    <summary>Can I modify the music?</summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            Yes. You can edit and modify the music to suit your project.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-category="usage">
+                    <summary>Can I use the same music in multiple projects?</summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            Yes. Your standard licence allows unlimited projects.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-category="usage">
+                    <summary>Can I use the music in a soundtrack?</summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            A separate soundtrack licence is required if you want to distribute
+                            the music as an official soundtrack or soundtrack DLC.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-category="usage">
+                    <summary>Can I include the music in a supporter or deluxe edition?</summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            An Extended Licence allows the music to be included as part of a
+                            larger supporter, bonus, deluxe, or collector's package.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-category="usage">
+                    <summary>Do I need to credit Magnality?</summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            Credit is appreciated but is not required unless otherwise stated
+                            by the specific licence.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-category="licensing">
+                    <summary>Where can I purchase your music?</summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            Magnality music is available through the stores linked on each
+                            product page.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-category="usage">
+                    <summary>Can I get a custom licence?</summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            Yes. If your project has licensing requirements that aren't covered
+                            by the standard, extended, or soundtrack licences, get in touch
+                            through the Contact page.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-category="about">
+                    <summary>Is your music AI generated?</summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            No. All my music is hand-composed and produced by me!
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-category="usage">
+                    <summary>Can content creators record gameplay with your music without copyright strikes?</summary>
+
+                    <div class="faq-answer">
+                        <p>
+                            Yes. None of my music is registered with ContentID so youtubers, streamers and other content
+                            creators can freely play your games without getting demonetised or copyright striked.
+                        </p>
+                        <br>
+                        <p>
+                            In the unlikely event that there are copyright issues please get in contact with me at
+                            magnalitymusic@gmail.com as this will be a false claim.
+                        </p>
+                    </div>
+                </details>
+
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        const categoryButtons = document.querySelectorAll(".faq-categories button");
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        categoryButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const category = button.dataset.category;
+
+                categoryButtons.forEach(button => {
+                    button.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+                faqItems.forEach(item => {
+                    const matches = category === "all" || item.dataset.category === category;
+                    item.style.display = matches ? "" : "none";
+
+                    if (!matches) {
+                        item.removeAttribute("open");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
