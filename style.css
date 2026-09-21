@@ -96,7 +96,7 @@ nav a.active::after {
 .music-grid a {
     display: block;
     border-radius: 12px;
-    
+
 }
 
 .music-grid img {
@@ -414,4 +414,36 @@ nav a.active::after {
 .faq-categories button.active {
     background: #fff;
     color: #111;
+}
+
+.credit-copy {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 16px;
+    padding: 16px;
+    background: none;
+    border-radius: 12px;
+    border: 0.5px solid #999;
+    width: fit-content;
+}
+
+#credit-text {
+    line-height: 1.6;
+}
+
+.credit-copy button {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    color: #111;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.credit-copy button:hover {
+    opacity: 0.85;
 }

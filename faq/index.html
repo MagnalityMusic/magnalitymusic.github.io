@@ -175,8 +175,26 @@
                     </div>
                 </details>
 
-            </div>
+                <details class="faq-item" data-category="usage">
+                    <summary>How should I credit you?</summary>
 
+                    <div class="faq-answer">
+                        <p>
+                            Feel free to use the following
+                            format:
+                        </p>
+
+                        <div class="credit-copy">
+                            <div id="credit-text">
+                                Music by Magnality<br>
+                                https://magnalitymusic.github.io/
+                            </div>
+
+                            <button type="button" id="copy-credit">Copy</button>
+                        </div>
+                    </div>
+                </details>
+            </div>
         </section>
     </main>
 
@@ -204,7 +222,21 @@
                 });
             });
         });
+        const copyButton = document.querySelector("#copy-credit");
+        const creditText = document.querySelector("#credit-text");
+
+        copyButton.addEventListener("click", async () => {
+            await navigator.clipboard.writeText(creditText.innerText);
+
+            copyButton.textContent = "Copied!";
+
+            setTimeout(() => {
+                copyButton.textContent = "Copy";
+            }, 2000);
+        });
+
     </script>
+
 
 </body>
 
