@@ -481,3 +481,83 @@ footer p {
     color: #999;
     font-size: 14px;
 }
+
+/* Album */
+
+.album-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+.album-header {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 80px;
+}
+
+.album-cover {
+    width: 450px;
+    max-width: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.album-info {
+    flex: 1;
+}
+
+.album-info h1 {
+    margin: 0 0 16px;
+    font-size: 48px;
+}
+
+.album-info p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.album-meta {
+    margin-top: 24px;
+}
+
+.album-section {
+    max-width: 800px;
+    margin: 0 auto 64px;
+}
+
+.album-section h2 {
+    margin: 0 0 16px;
+}
+
+.album-section p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+.album-features {
+    padding: 0;
+    list-style: none;
+}
+
+.album-features li {
+    margin-bottom: 12px;
+}
+
+.album-stores {
+    display: flex;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.album-stores a {
+    color: #fff;
+    font-size: 48px;
+    text-decoration: none;
+}
+
+.album-stores a:hover {
+    opacity: 0.7;
+}
