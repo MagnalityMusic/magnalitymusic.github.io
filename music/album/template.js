@@ -1,26 +1,26 @@
 const album = albums[albumName];
 
 if (!album) {
-
-    document.body.innerHTML = "<h1>Album not found</h1>";
-
+  document.body.innerHTML = "<h1>Album not found</h1>";
 } else {
+  document.title = `${album.title} | Magnality`;
 
-    document.title = `${album.title} | Magnality`;
-
-    document.body.innerHTML = `
+  document.body.innerHTML = `
 
         <header>
+      <div class="header-content">
+        <a href="../">magnality</a>
 
-            <a href="../../">Magnality</a>
-
-            <nav>
-                <a href="../">Music</a>
-                <a href="../../sound/">Sound</a>
-                <a href="../../apps/">Apps</a>
-            </nav>
-
-        </header>
+        <nav>
+          <a href="../" class="active">music</a>
+          <a href="../../sound/">sound</a>
+          <a href="../../apps/">apps</a>
+          <a href="../../licence/">licence</a>
+          <a href="../../contact/">contact</a>
+          <a href="../../faq/">faq</a>
+        </nav>
+      </div>
+    </header>
 
 
         <main class="album-page">
@@ -39,15 +39,19 @@ if (!album) {
 
     <p>${album.description}</p>
 
-    ${album.updates ? `
+    ${
+      album.updates
+        ? `
     <div class="album-updates">
         <h3>WHAT'S NEW — v${album.version}</h3>
 
        
-            ${album.updates.map(update => `${update}`).join("")}
+            ${album.updates.map((update) => `${update}`).join("")}
         
     </div>
-` : ""}
+`
+        : ""
+    }
 
   
 

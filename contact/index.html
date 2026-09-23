@@ -1,118 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="../style.css">
+    <title>magnality</title>
+  </head>
 
-    <title>Contact</title>
-</head>
-
-<body>
-
+  <body>
     <header>
-
-        <a href="../">Magnality</a>
+      <div class="header-content">
+        <a href="../">magnality</a>
 
         <nav>
-            <a href="../music/">Music</a>
-            <a href="../sound/">Sound</a>
-            <a href="../apps/">Apps</a>
-            <a href="../licence/">Licence</a>
-            <a href="../contact/" class="active">Contact</a>
-            <a href="../faq/">FAQ</a>
+          <a href="../music/">music</a>
+          <a href="../sound/">sound</a>
+          <a href="../apps/">apps</a>
+          <a href="../licence/">licence</a>
+          <a href="../contact/" class="active">contact</a>
+          <a href="../faq/">faq</a>
         </nav>
-
+      </div>
     </header>
 
     <main>
-        <section class="intro">
+      <form class="contact-form">
+        <label for="email">Email</label>
 
-            <img src="../assets/magnality-banner.jpg" alt="Contact">
+        <input type="email" id="email" name="email" required />
 
-            <div class="intro-content">
-                <h1>Contact</h1>
-            </div>
+        <label for="subject">Subject</label>
 
-        </section>
+        <select id="subject" name="subject" required>
+          <option value="">Select a subject</option>
+          <option value="Music Enquiry">Music Enquiry</option>
+          <option value="Extended Licence">Extended Licence</option>
+          <option value="Soundtrack Licence">Soundtrack Licence</option>
+          <option value="Other">Other</option>
+        </select>
 
+        <label for="message">Message</label>
 
-        <form class="contact-form">
+        <textarea id="message" name="message" rows="8" required></textarea>
 
-            <label for="email">Email</label>
+        <button type="submit">Send Message</button>
+      </form>
 
-            <input type="email" id="email" name="email" required>
-
-
-            <label for="subject">Subject</label>
-
-            <select id="subject" name="subject" required>
-
-                <option value="">Select a subject</option>
-                <option value="Music Enquiry">Music Enquiry</option>
-                <option value="Extended Licence">Extended Licence</option>
-                <option value="Soundtrack Licence">Soundtrack Licence</option>
-                <option value="Other">Other</option>
-
-            </select>
-
-
-            <label for="message">Message</label>
-
-            <textarea id="message" name="message" rows="8" required></textarea>
-
-
-            <button type="submit">
-                Send Message
-            </button>
-
-        </form>
-
-        <p class="contact-note">
-            Your email app should open after clicking Send.
-            If it doesn't, you can email me directly at
-            <a href="mailto:magnalitymusic@gmail.com">
-                magnalitymusic@gmail.com
-            </a>
-        </p>
+      <p class="contact-note">
+        Your email app should open after clicking Send. If it doesn't, you can
+        email me directly at
+        <a href="mailto:magnalitymusic@gmail.com"> magnalitymusic@gmail.com </a>
+      </p>
     </main>
 
-
     <script>
+      const params = new URLSearchParams(window.location.search);
+      const subject = params.get("subject");
 
-        const params = new URLSearchParams(window.location.search);
-        const subject = params.get("subject");
+      if (subject) {
+        document.querySelector("#subject").value = subject;
+      }
 
-        if (subject) {
-            document.querySelector("#subject").value = subject;
-        }
+      const form = document.querySelector(".contact-form");
 
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-        const form = document.querySelector(".contact-form");
+        const email = document.querySelector("#email").value;
+        const subject = document.querySelector("#subject").value;
+        const message = document.querySelector("#message").value;
 
-        form.addEventListener("submit", function (event) {
+        const body = "From: " + email + "\n\n" + message;
 
-            event.preventDefault();
-
-            const email = document.querySelector("#email").value;
-            const subject = document.querySelector("#subject").value;
-            const message = document.querySelector("#message").value;
-
-            const body =
-                "From: " + email + "\n\n" +
-                message;
-
-            window.location.href =
-                "mailto:magnalitymusic@gmail.com" +
-                "?subject=" + encodeURIComponent(subject) +
-                "&body=" + encodeURIComponent(body);
-
-        });
-
+        window.location.href =
+          "mailto:magnalitymusic@gmail.com" +
+          "?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
