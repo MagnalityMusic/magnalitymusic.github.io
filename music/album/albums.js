@@ -4,6 +4,7 @@ const albums = {
         title: "ENTROPY",
         image: "../../assets/music/ENTROPY.png",
         description: "Liminal Space Music",
+        version: "1.1",
         about: "ENTROPY is a growing liminal space music collection inspired by The Backrooms.",
         tracks: 50,
         duration: "4+ hours",
@@ -19,6 +20,7 @@ const albums = {
         title: "SUBMERGE",
         image: "../../assets/music/SUBMERGE.png",
         description: "Underwater Music",
+        version: "1.1",
         about: "SUBMERGE is a growing underwater music collection inspired by Subnautica, ABZÛ and The Blue Planet.",
         tracks: 50,
         duration: "5+ hours",
@@ -34,6 +36,7 @@ const albums = {
         title: "LAMENT",
         image: "../../assets/music/LAMENT.png",
         description: "Post-Apocalyptic Horror Music",
+        version: "1.1",
         about: "LAMENT is a growing post-apocalyptic, dystopian & horror music collection inspired by The Last of Us.",
         tracks: 49,
         duration: "3+ hours",
@@ -49,9 +52,13 @@ const albums = {
         title: "ESCAPISM",
         image: "../../assets/music/ESCAPISM.png",
         description: "Stylized Fantasy Music",
+        version: "1.2",
+        updates: [
+            "🎁 added 10 new tracks!"
+        ],
         about: "ESCAPISM is a growing stylized fantasy music collection inspired by emotional, narrative-driven games.",
         tracks: 37,
-        duration: "1+ hours",
+        duration: "1 hour 53 minutes",
         stores: {
             itch: "https://magnality-music.itch.io/escapism-stylized-fantasy-music",
             unity: "https://assetstore.unity.com/packages/package/343150",

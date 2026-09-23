@@ -39,9 +39,17 @@ if (!album) {
 
     <p>${album.description}</p>
 
-    <p class="album-meta">
-        ${album.tracks} tracks · ${album.duration}
-    </p>
+    ${album.updates ? `
+    <div class="album-updates">
+        <h3>WHAT'S NEW — v${album.version}</h3>
+
+       
+            ${album.updates.map(update => `${update}`).join("")}
+        
+    </div>
+` : ""}
+
+  
 
     <div class="album-stores">
 
@@ -81,17 +89,21 @@ if (!album) {
 
             <section class="album-section">
 
-                <h2>Features</h2>
+    <h2>Features</h2>
 
-                <ul class="album-features">
+    <ul class="album-features">
 
-                    <li>${album.tracks} seamlessly looping tracks</li>
-                    <li>${album.duration} of music</li>
-                    <li>Royalty-free for commercial & non-commercial use</li>
+        <li>${album.tracks} seamlessly looping tracks</li>
+        <li>${album.duration} of music</li>
+        <li>Royalty-free for commercial & non-commercial use</li>
+        <li>Safe for YouTube & Twitch</li>
+        <li>High-quality WAV format (44.1kHz / 16-bit)</li>
+        <li>Free future updates</li>
+        <li>No AI</li>
 
-                </ul>
+    </ul>
 
-            </section>
+</section>
 
         </main>
 
