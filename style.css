@@ -547,13 +547,19 @@ nav a.active::after {
 }
 
 .faq-answer {
-  padding: 0 24px 24px;
+  height: 0;
+  overflow: hidden;
+  padding: 0 24px;
 }
 
 .faq-answer p {
   margin: 0;
   line-height: 1.7;
   color: #aaa;
+}
+
+.faq-answer h3 {
+  margin: 0 0 12px;
 }
 
 .coming-soon {
