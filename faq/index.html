@@ -188,100 +188,55 @@
   </main>
 
   <script>
-    const categoryButtons = document.querySelectorAll(
-      ".faq-categories button",
-    );
-    const faqItems = document.querySelectorAll(".faq-item");
+    document.querySelectorAll(".faq-item").forEach((item) => {
+      const summary = item.querySelector("summary");
+      const answer = item.querySelector(".faq-answer");
 
-    categoryButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const category = button.dataset.category;
+      summary.addEventListener("click", (event) => {
+        event.preventDefault();
 
-        categoryButtons.forEach((button) => {
-          button.classList.remove("active");
-        });
+        if (item.hasAttribute("open")) {
+          // Closing
+          const height = answer.scrollHeight;
 
-        button.classList.add("active");
+          answer.style.height = `${height}px`;
 
-        faqItems.forEach((item) => {
-          const matches =
-            category === "all" || item.dataset.category === category;
-          item.style.display = matches ? "" : "none";
+          requestAnimationFrame(() => {
+            answer.style.transition = "height 300ms ease";
+            answer.style.height = "0px";
+          });
 
-          if (!matches) {
-            item.removeAttribute("open");
-          }
-        });
+          answer.addEventListener(
+            "transitionend",
+            () => {
+              item.removeAttribute("open");
+              answer.style.transition = "";
+              answer.style.height = "";
+            },
+            { once: true }
+          );
+        } else {
+          // Opening
+          item.setAttribute("open", "");
+
+          answer.style.height = "0px";
+
+          requestAnimationFrame(() => {
+            answer.style.transition = "height 300ms ease";
+            answer.style.height = `${answer.scrollHeight}px`;
+          });
+
+          answer.addEventListener(
+            "transitionend",
+            () => {
+              answer.style.transition = "";
+            },
+            { once: true }
+          );
+        }
       });
-    });
-    const copyButton = document.querySelector("#copy-credit");
-    const creditText = document.querySelector("#credit-text");
-
-    copyButton.addEventListener("click", async () => {
-      await navigator.clipboard.writeText(creditText.innerText);
-
-      copyButton.textContent = "Copied!";
-
-      setTimeout(() => {
-        copyButton.textContent = "Copy";
-      }, 2000);
     });
   </script>
 </body>
 
 </html>
-
-<script>
-  document.querySelectorAll(".faq-item").forEach((item) => {
-    const summary = item.querySelector("summary");
-    const answer = item.querySelector(".faq-answer");
-
-    summary.addEventListener("click", (event) => {
-      event.preventDefault();
-
-      if (item.hasAttribute("open")) {
-        // Closing
-        answer.style.height = `${answer.scrollHeight}px`;
-
-        requestAnimationFrame(() => {
-          answer.style.transition = "height 300ms ease, padding 300ms ease";
-          answer.style.height = "0";
-          answer.style.paddingBottom = "0";
-        });
-
-        answer.addEventListener(
-          "transitionend",
-          () => {
-            item.removeAttribute("open");
-            answer.style.transition = "";
-            answer.style.height = "";
-            answer.style.paddingBottom = "";
-          },
-          { once: true }
-        );
-      } else {
-        // Opening
-        item.setAttribute("open", "");
-
-        const height = answer.scrollHeight;
-
-        answer.style.height = "0";
-
-        requestAnimationFrame(() => {
-          answer.style.transition = "height 300ms ease, padding 300ms ease";
-          answer.style.height = `${height}px`;
-          answer.style.paddingBottom = "24px";
-        });
-
-        answer.addEventListener(
-          "transitionend",
-          () => {
-            answer.style.height = "auto";
-            answer.style.transition = "";
-          },
-          { once: true }
-        );
-      }
-    });
-  });
-</script>
