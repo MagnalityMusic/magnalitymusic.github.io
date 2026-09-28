@@ -1,242 +1,257 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+    <title>magnality</title>
+  </head>
 
-  <title>magnality</title>
-</head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="../">magnality</a>
 
-<body>
-  <header>
-    <div class="header-content">
-      <a href="../">magnality</a>
-
-      <nav>
-        <a href="../music/">music</a>
-        <a href="../sound/">sound</a>
-        <a href="../apps/">apps</a>
-        <a href="../licence/">licence</a>
-        <a href="../contact/">contact</a>
-        <a href="../faq/" class="active">faq</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="faq-content">
-      <div class="faq-categories">
-        <button class="active" data-category="all">All</button>
-        <button data-category="licensing">Licensing</button>
-        <button data-category="usage">Usage</button>
-        <button data-category="purchasing">Purchasing</button>
-        <button data-category="about">About</button>
+        <nav>
+          <a href="../music/">music</a>
+          <a href="../sound/">sound</a>
+          <a href="../apps/">apps</a>
+          <a href="../licence/">licence</a>
+          <a href="../contact/">contact</a>
+          <a href="../faq/" class="active">faq</a>
+        </nav>
       </div>
+    </header>
 
-      <div class="faq-list">
-        <details class="faq-item" data-category="usage">
-          <summary>✅ Can I sell my game with your music?</summary>
+    <main>
+      <section class="faq-content">
+        <div class="faq-categories">
+          <button class="active" data-category="all">All</button>
+          <button data-category="licensing">Licensing</button>
+          <button data-category="about">General</button>
+        </div>
 
-          <div class="faq-answer">
-            <h3>Yes</h3>
-            <p>
-              You can commercially use the music of which you purchased from any of the stores.
-              You can read more about the <a href="/licence">standard licence here</a>.
-            </p>
-          </div>
-        </details>
+        <div class="faq-list">
+          <details class="faq-item" data-category="licensing">
+            <summary>Can I sell my game with your music in it?</summary>
 
-        <details class="faq-item" data-category="usage">
-          <summary>✅ Can I use the music commercially?</summary>
-
-          <div class="faq-answer">
-            <p>Yes. Commercial use is included with the standard licence.</p>
-          </div>
-        </details>
-
-        <details class="faq-item" data-category="usage">
-          <summary>Can I modify the music?</summary>
-
-          <div class="faq-answer">
-            <p>
-              Yes. You can edit and modify the music to suit your project.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item" data-category="usage">
-          <summary>Can I use the same music in multiple projects?</summary>
-
-          <div class="faq-answer">
-            <p>Yes. Your standard licence allows unlimited projects.</p>
-          </div>
-        </details>
-
-        <details class="faq-item" data-category="usage">
-          <summary>Can I use the music in a soundtrack?</summary>
-
-          <div class="faq-answer">
-            <p>
-              A separate soundtrack licence is required if you want to
-              distribute the music as an official soundtrack or soundtrack
-              DLC.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item" data-category="usage">
-          <summary>
-            Can I include the music in a supporter or deluxe edition?
-          </summary>
-
-          <div class="faq-answer">
-            <p>
-              An Extended Licence allows the music to be included as part of a
-              larger supporter, bonus, deluxe, or collector's package.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item" data-category="usage">
-          <summary>Do I need to credit Magnality?</summary>
-
-          <div class="faq-answer">
-            <p>
-              Credit is appreciated but is not required unless otherwise
-              stated by the specific licence.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item" data-category="licensing">
-          <summary>Where can I purchase your music?</summary>
-
-          <div class="faq-answer">
-            <p>
-              Magnality music is available through the stores linked on each
-              product page.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item" data-category="usage">
-          <summary>Can I get a custom licence?</summary>
-
-          <div class="faq-answer">
-            <p>
-              Yes. If your project has licensing requirements that aren't
-              covered by the standard, extended, or soundtrack licences, get
-              in touch through the Contact page.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item" data-category="about">
-          <summary>Is your music AI generated?</summary>
-
-          <div class="faq-answer">
-            <p>No. All my music is hand-composed and produced by me!</p>
-          </div>
-        </details>
-
-        <details class="faq-item" data-category="usage">
-          <summary>
-            Can content creators record gameplay with your music without
-            copyright strikes?
-          </summary>
-
-          <div class="faq-answer">
-            <p>
-              Yes. None of my music is registered with ContentID so youtubers,
-              streamers and other content creators can freely play your games
-              without getting demonetised or copyright striked.
-            </p>
-            <br />
-            <p>
-              In the unlikely event that there are copyright issues please get
-              in contact with me at magnalitymusic@gmail.com as this will be a
-              false claim.
-            </p>
-          </div>
-        </details>
-
-        <details class="faq-item" data-category="usage">
-          <summary>How should I credit you?</summary>
-
-          <div class="faq-answer">
-            <p>Feel free to use the following format:</p>
-
-            <div class="credit-copy">
-              <div id="credit-text">
-                Music by Magnality<br />
-                https://magnalitymusic.github.io/
-              </div>
-
-              <button type="button" id="copy-credit">Copy</button>
+            <div class="faq-answer">
+              <p>
+                <b>Yes</b> - when you purchase one of my music packs, the
+                standard licence means you can commercially use that music within
+                your game.
+              </p>
             </div>
-          </div>
-        </details>
-      </div>
-    </section>
-  </main>
+          </details>
 
-  <script>
-    document.querySelectorAll(".faq-item").forEach((item) => {
-      const summary = item.querySelector("summary");
-      const answer = item.querySelector(".faq-answer");
+          <details class="faq-item" data-category="licensing">
+            <summary>Can I modify the music?</summary>
 
-      summary.addEventListener("click", (event) => {
-        event.preventDefault();
+            <div class="faq-answer">
+              <p>
+                Yes. You can edit and modify the music to suit your project.
+              </p>
+            </div>
+          </details>
 
-        if (item.hasAttribute("open")) {
-          // Closing
-          const height = answer.scrollHeight;
+          <details class="faq-item" data-category="licensing">
+            <summary>Can I use the same music in multiple projects?</summary>
 
-          answer.style.height = `${height}px`;
+            <div class="faq-answer">
+              <p>Yes. Your standard licence allows unlimited projects.</p>
+            </div>
+          </details>
 
-          requestAnimationFrame(() => {
-            answer.style.transition = "height 300ms ease";
+          <details class="faq-item" data-category="licensing">
+            <summary>Can I use the music in a soundtrack?</summary>
+
+            <div class="faq-answer">
+              <p>
+                A separate soundtrack licence is required if you want to
+                distribute the music as an official soundtrack or soundtrack
+                DLC.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" data-category="licensing">
+            <summary>
+              Can I include the music in a supporter or deluxe edition?
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                An Extended Licence allows the music to be included as part of a
+                larger supporter, bonus, deluxe, or collector's package.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" data-category="licensing">
+            <summary>Do I need to credit Magnality?</summary>
+
+            <div class="faq-answer">
+              <p>
+                Credit is appreciated but is not required unless otherwise
+                stated by the specific licence.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" data-category="licensing">
+            <summary>Where can I purchase your music?</summary>
+
+            <div class="faq-answer">
+              <p>
+                Magnality music is available through the stores linked on each
+                product page.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" data-category="licensing">
+            <summary>Can I get a custom licence?</summary>
+
+            <div class="faq-answer">
+              <p>
+                Yes. If your project has licensing requirements that aren't
+                covered by the standard, extended, or soundtrack licences, get
+                in touch through the Contact page.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" data-category="General">
+            <summary>Is your music AI generated?</summary>
+
+            <div class="faq-answer">
+              <p>No. All my music is hand-composed and produced by me!</p>
+            </div>
+          </details>
+
+          <details class="faq-item" data-category="licensing">
+            <summary>
+              Can content creators record gameplay with your music without
+              copyright strikes?
+            </summary>
+
+            <div class="faq-answer">
+              <p>
+                Yes. None of my music is registered with ContentID so youtubers,
+                streamers and other content creators can freely play your games
+                without getting demonetised or copyright striked.
+              </p>
+              <br />
+              <p>
+                In the unlikely event that there are copyright issues please get
+                in contact with me at magnalitymusic@gmail.com as this will be a
+                false claim.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" data-category="licensing">
+            <summary>Do I need to credit you?</summary>
+
+            <div class="faq-answer">
+              <p>Feel free to use the following format:</p>
+
+              <div class="credit-copy">
+                <div id="credit-text">
+                  Music by Magnality<br />
+                  https://magnalitymusic.github.io/
+                </div>
+
+                <button type="button" id="copy-credit">Copy</button>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        const summary = item.querySelector("summary");
+        const answer = item.querySelector(".faq-answer");
+
+        summary.addEventListener("click", (event) => {
+          event.preventDefault();
+
+          if (item.hasAttribute("open")) {
+            const height = answer.scrollHeight;
+
+            answer.style.height = `${height}px`;
+
+            requestAnimationFrame(() => {
+              answer.style.transition = "height 300ms ease";
+              answer.style.height = "0px";
+            });
+
+            answer.addEventListener(
+              "transitionend",
+              () => {
+                item.removeAttribute("open");
+                answer.style.transition = "";
+                answer.style.height = "";
+              },
+              { once: true },
+            );
+          } else {
+            // Opening
+            item.setAttribute("open", "");
+
             answer.style.height = "0px";
-          });
 
-          answer.addEventListener(
-            "transitionend",
-            () => {
-              item.removeAttribute("open");
-              answer.style.transition = "";
-              answer.style.height = "";
-            },
-            { once: true }
-          );
-        } else {
-          // Opening
-          item.setAttribute("open", "");
+            requestAnimationFrame(() => {
+              answer.style.transition = "height 300ms ease";
+              answer.style.height = `${answer.scrollHeight}px`;
+            });
 
-          answer.style.height = "0px";
-
-          requestAnimationFrame(() => {
-            answer.style.transition = "height 300ms ease";
-            answer.style.height = `${answer.scrollHeight}px`;
-          });
-
-          answer.addEventListener(
-            "transitionend",
-            () => {
-              answer.style.transition = "";
-            },
-            { once: true }
-          );
-        }
+            answer.addEventListener(
+              "transitionend",
+              () => {
+                answer.style.transition = "";
+              },
+              { once: true },
+            );
+          }
+        });
       });
-    });
-  </script>
-</body>
+    </script>
 
+    <script>
+      const filterButtons = document.querySelectorAll(".faq-categories button");
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const category = button.dataset.category;
+
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          faqItems.forEach((item) => {
+            if (category === "all" || item.dataset.category === category) {
+              item.style.display = "";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
