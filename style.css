@@ -89,23 +89,23 @@ nav a.active::after {
 
 footer {
   width: 100%;
-  padding: 80px 40px 40px;
+  padding: 20px 0 20px;
+  border-top: 1px solid #333333;
 }
 
 .footer-content {
-  max-width: var(--content-width);
+  max-width: calc(var(--content-width) - 80px);
   margin: 0 auto;
   padding: 24px 0;
-  border-top: 1px solid #333;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-footer>p {
+footer > p {
   max-width: var(--content-width);
   margin: 0 auto;
-  padding-top: 16px;
+  padding: 16px 40px 0;
   color: #555;
   font-size: 12px;
 }
@@ -115,23 +115,37 @@ footer>p {
   gap: 24px;
 }
 
-.socials a {
-  color: #999;
-  font-size: 28px;
-  text-decoration: none;
-  transition: color 150ms ease, transform 150ms ease;
-}
-
-.socials a:hover {
-  color: #fff;
-  transform: translateY(-2px);
-}
-
+.socials a,
 .footer-brand {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
+  position: relative;
+  color: #999;
   text-decoration: none;
+  transition: color 150ms ease;
+  font-size: 16px;
+}
+
+.socials a:hover,
+.footer-brand:hover {
+  color: #fff;
+}
+
+.socials a::after,
+.footer-brand::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms ease;
+}
+
+.socials a:hover::after,
+.footer-brand:hover::after {
+  transform: scaleX(1);
 }
 
 .intro {
@@ -544,28 +558,17 @@ footer>p {
   opacity: 0.85;
 }
 
-
-
-.socials {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.socials a {
-  color: #999;
-  font-size: 24px;
-  text-decoration: none;
-}
-
-.socials a:hover {
-  opacity: 0.7;
-}
-
 footer p {
   margin-top: 24px;
   color: #999;
   font-size: 14px;
+}
+
+.copyright-magnality {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 24px;
 }
 
 /* Album */
